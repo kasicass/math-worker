@@ -730,7 +730,7 @@ function extentOf(elements) {
   return max || 1;
 }
 
-export function createExerciseLesson({ title, questions }) {
+export function createExerciseLesson({ title, unit = '圆', questions }) {
   return async function mount({ stage: stageEl, panel }) {
     const stage = createStage(stageEl, { height: 9 });
     if (import.meta.env.DEV) window.__mathStage = stage;
@@ -749,7 +749,7 @@ export function createExerciseLesson({ title, questions }) {
     panel.innerHTML = `
       <div class="panel-title">
         <h2>${title}</h2>
-        <span class="badge">六上 · 圆</span>
+        <span class="badge">六上 · ${unit}</span>
       </div>
 
       <div class="control">

@@ -37,7 +37,16 @@ const BOOK_META = [
 /** 各册主题（按课本目录顺序）；目前只有六年级上册已录入，来源于 doc/数学六上.pdf */
 const TOPICS = {
   g6a: [
-    { id: 'fraction-multiply', title: '分数乘法', page: 2, verified: false, status: 'planned' },
+    {
+      id: 'fraction-multiply',
+      title: '分数乘法',
+      page: 2,
+      verified: false,
+      sections: [
+        { id: 'fraction-multiply-model', title: '分数乘法', lesson: 'fraction-multiply', status: 'ready' },
+        { id: 'exercise-1', title: '练习一', lesson: 'exercise-1', status: 'ready' },
+      ],
+    },
     { id: 'position-direction', title: '位置与方向（二）', page: 18, verified: false, status: 'planned' },
     { id: 'fraction-divide', title: '分数除法', page: 27, verified: false, status: 'planned' },
     { id: 'ratio', title: '比', page: 46, verified: false, status: 'planned' },

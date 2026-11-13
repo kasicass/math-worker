@@ -750,4 +750,4 @@ const QUESTIONS = [
   },
 ];
 
-export default createExerciseLesson({ title: '练习十五', questions: QUESTIONS });
+export default createExerciseLesson({ title: '练习十五', unit: '圆', questions: QUESTIONS });

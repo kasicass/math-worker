@@ -10,6 +10,8 @@
  * 用动态 import，保证只有进入主题页时才加载 three.js。
  */
 const registry = {
+  'fraction-multiply': () => import('./fraction-multiply.js'),
+  'exercise-1': () => import('./exercise-1.js'),
   circle: () => import('./circle.js'),
   'compass-construction': () => import('./compass-construction.js'),
   'exercise-13': () => import('./exercise-13.js'),

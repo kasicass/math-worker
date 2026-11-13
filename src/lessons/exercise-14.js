@@ -563,4 +563,4 @@ function rope(step, cx, cy, r, n) {
   ];
 }
 
-export default createExerciseLesson({ title: '练习十四', questions: QUESTIONS });
+export default createExerciseLesson({ title: '练习十四', unit: '圆', questions: QUESTIONS });
