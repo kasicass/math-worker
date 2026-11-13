@@ -68,6 +68,8 @@ const TOPICS = {
         { id: 'fraction-divide-model', title: '分数除法', lesson: 'fraction-divide', status: 'ready' },
         { id: 'exercise-6', title: '练习六', lesson: 'exercise-6', status: 'ready' },
         { id: 'exercise-7', title: '练习七', lesson: 'exercise-7', status: 'ready' },
+        { id: 'solve-by-fraction', title: '解决问题', lesson: 'solve-by-fraction', status: 'ready' },
+        { id: 'exercise-8', title: '练习八', lesson: 'exercise-8', status: 'ready' },
       ],
     },
     { id: 'ratio', title: '比', page: 46, verified: false, status: 'planned' },
