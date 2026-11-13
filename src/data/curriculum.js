@@ -49,7 +49,16 @@ const TOPICS = {
         { id: 'exercise-3', title: '练习三', lesson: 'exercise-3', status: 'ready' },
       ],
     },
-    { id: 'position-direction', title: '位置与方向（二）', page: 18, verified: false, status: 'planned' },
+    {
+      id: 'position-direction',
+      title: '位置与方向（二）',
+      page: 18,
+      verified: false,
+      sections: [
+        { id: 'direction-model', title: '位置与方向', lesson: 'direction', status: 'ready' },
+        { id: 'exercise-5', title: '练习五', lesson: 'exercise-5', status: 'ready' },
+      ],
+    },
     { id: 'fraction-divide', title: '分数除法', page: 27, verified: false, status: 'planned' },
     { id: 'ratio', title: '比', page: 46, verified: false, status: 'planned' },
     {
