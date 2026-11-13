@@ -72,7 +72,16 @@ const TOPICS = {
         { id: 'exercise-8', title: '练习八', lesson: 'exercise-8', status: 'ready' },
       ],
     },
-    { id: 'ratio', title: '比', page: 46, verified: false, status: 'planned' },
+    {
+      id: 'ratio',
+      title: '比',
+      page: 46,
+      verified: false,
+      sections: [
+        { id: 'ratio-model', title: '比', lesson: 'ratio', status: 'ready' },
+        { id: 'exercise-11', title: '练习十一', lesson: 'exercise-11', status: 'ready' },
+      ],
+    },
     {
       id: 'circle',
       title: '圆',
