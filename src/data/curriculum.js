@@ -178,7 +178,13 @@ const TOPICS = {
         { id: 'exercise-22', title: '练习二十二', lesson: 'exercise-22', status: 'ready' },
       ],
     },
-    { id: 'review', title: '总复习', page: 110, verified: false, status: 'planned' },
+    {
+      id: 'review',
+      title: '总复习',
+      page: 110,
+      verified: false,
+      sections: [{ id: 'exercise-23', title: '练习二十三', lesson: 'exercise-23', status: 'ready' }],
+    },
   ],
 };
 

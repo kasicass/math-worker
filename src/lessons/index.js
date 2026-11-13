@@ -33,6 +33,7 @@ const registry = {
   'exercise-21': () => import('./exercise-21.js'),
   'number-shape': () => import('./number-shape.js'),
   'exercise-22': () => import('./exercise-22.js'),
+  'exercise-23': () => import('./exercise-23.js'),
   circle: () => import('./circle.js'),
   'compass-construction': () => import('./compass-construction.js'),
   'exercise-13': () => import('./exercise-13.js'),
