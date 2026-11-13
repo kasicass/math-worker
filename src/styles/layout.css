@@ -1,0 +1,164 @@
+/* 页面骨架：顶栏 / 内容区 / 页脚 */
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-5);
+  border-bottom: 1px solid var(--c-border);
+  background: rgb(255 255 255 / 86%);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  color: inherit;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: linear-gradient(140deg, var(--c-primary), #7c9bff);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.brand-text strong {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.brand-text small {
+  color: var(--c-text-faint);
+  font-size: 12px;
+}
+
+.app-nav {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.app-nav-link {
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: 999px;
+  color: var(--c-text-soft);
+  font-size: 14px;
+}
+
+.app-nav-link:hover {
+  background: var(--c-surface-soft);
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+/* 已经在当前页面时，导航项标成"当前页"，避免看起来像个失效的按钮 */
+.app-nav-link[aria-current='page'] {
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+  font-weight: 550;
+}
+
+.view {
+  flex: 1;
+  width: 100%;
+  max-width: var(--app-max);
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-5) var(--sp-7);
+}
+
+.view > * + * {
+  margin-top: var(--sp-5);
+}
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-5) var(--sp-6);
+  color: var(--c-text-faint);
+  font-size: 13px;
+}
+
+.app-footer .dot {
+  opacity: 0.6;
+}
+
+/* 页面级版式 */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.page-head .lead {
+  max-width: 62ch;
+  margin: var(--sp-2) 0 0;
+  color: var(--c-text-soft);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--c-text-faint);
+  font-size: 13px;
+}
+
+.breadcrumb a {
+  color: var(--c-text-soft);
+}
+
+.breadcrumb .sep {
+  opacity: 0.5;
+}
+
+/* 双栏工作区：左侧互动舞台，右侧说明 / 控制 */
+.workspace {
+  display: grid;
+  gap: var(--sp-5);
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
+  align-items: start;
+}
+
+@media (width <= 900px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .view {
+    padding: var(--sp-5) var(--sp-4) var(--sp-6);
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

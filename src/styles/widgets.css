@@ -1,0 +1,586 @@
+/* 通用组件：卡片 / 面板 / 按钮 / 表单控件 / 舞台 */
+
+/* ---------- 面板 ---------- */
+.panel {
+  padding: var(--sp-5);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  background: var(--c-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.panel-soft {
+  background: var(--c-surface-soft);
+  box-shadow: none;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--c-primary);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: filter 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+
+.btn-ghost {
+  border-color: var(--c-border);
+  background: var(--c-surface);
+  color: var(--c-text);
+}
+
+.btn-ghost:hover {
+  background: var(--c-surface-soft);
+}
+
+.btn[aria-pressed='true'] {
+  border-color: var(--c-primary);
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+}
+
+/* ---------- 教材入口卡片 ---------- */
+.book-grid {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (width <= 900px) {
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 480px) {
+  .book-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  background: var(--c-surface);
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.book-card:hover {
+  border-color: #c3d2ff;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.book-card .label {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.book-card .meta {
+  color: var(--c-text-faint);
+  font-size: 13px;
+}
+
+.book-card.is-empty .label {
+  color: var(--c-text-faint);
+}
+
+/* ---------- 主题列表 ---------- */
+.topic-list {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  background: var(--c-surface);
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.topic-row:hover {
+  border-color: #c3d2ff;
+  background: #fbfcff;
+  text-decoration: none;
+}
+
+.topic-row .index {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--c-surface-soft);
+  color: var(--c-text-soft);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.topic-row .title {
+  flex: 1;
+  min-width: 0;
+  font-weight: 550;
+}
+
+.topic-row .page {
+  color: var(--c-text-faint);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ---------- 状态徽标 ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--c-surface-soft);
+  color: var(--c-text-soft);
+  font-size: 12px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.badge-ready {
+  background: var(--c-green-soft);
+  color: var(--c-green);
+}
+
+.badge-planned {
+  background: var(--c-accent-soft);
+  color: #b4740a;
+}
+
+/* ---------- 舞台 ---------- */
+.stage {
+  position: relative;
+  min-height: 380px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  background: var(--c-surface);
+  overflow: hidden;
+}
+
+.stage-canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: default;
+}
+
+.stage-canvas:active {
+  cursor: grabbing;
+}
+
+.stage-hint {
+  position: absolute;
+  bottom: var(--sp-3);
+  left: var(--sp-4);
+  z-index: 1;
+  color: var(--c-text-faint);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* ---------- 控件 ---------- */
+.control {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.control + .control {
+  margin-top: var(--sp-4);
+}
+
+.control-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  font-size: 14px;
+  color: var(--c-text-soft);
+}
+
+.control-head output {
+  color: var(--c-text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--c-primary);
+}
+
+/* ---------- 数据读数 ---------- */
+.readouts {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.readout {
+  padding: var(--sp-3);
+  border-radius: var(--r-md);
+  background: var(--c-surface-soft);
+}
+
+.readout dt {
+  color: var(--c-text-faint);
+  font-size: 12px;
+}
+
+.readout dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.readout dd .unit {
+  margin-left: 2px;
+  color: var(--c-text-faint);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- 空状态 / 说明 ---------- */
+.empty-state {
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin-bottom: var(--sp-2);
+}
+
+.empty-state p {
+  color: var(--c-text-soft);
+}
+
+.hint-list {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--c-text-soft);
+}
+
+.hint-list li + li {
+  margin-top: var(--sp-1);
+}
+
+/* ---------- 单元 → 互动主题的层级列表 ---------- */
+.topic-group {
+  list-style: none;
+}
+
+.topic-sublist {
+  margin: var(--sp-2) 0 0;
+  padding: 0 0 0 var(--sp-6);
+  list-style: none;
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.topic-row-group {
+  background: var(--c-surface-soft);
+  border-color: transparent;
+}
+
+.topic-row-group:hover {
+  background: var(--c-surface-soft);
+  border-color: var(--c-border);
+}
+
+.topic-row-sub .index {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c7d0e4;
+  color: transparent;
+}
+
+.badge-partial {
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+}
+
+/* ---------- 作图步骤 ---------- */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.step-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+  counter-reset: step;
+}
+
+.step-list button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--c-text-soft);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.step-list button:hover {
+  background: var(--c-surface-soft);
+  color: var(--c-text);
+}
+
+.step-list .num {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--c-surface-soft);
+  color: var(--c-text-faint);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.step-list button[data-state='current'] {
+  background: var(--c-primary-soft);
+  border-color: #c3d2ff;
+  color: var(--c-primary);
+  font-weight: 550;
+}
+
+.step-list button[data-state='current'] .num {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+.step-list button[data-state='done'] {
+  color: var(--c-text);
+}
+
+.step-list button[data-state='done'] .num {
+  background: var(--c-green-soft);
+  color: var(--c-green);
+}
+
+/* ---------- 色板 ---------- */
+.swatches {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.swatch {
+  display: inline-flex;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.swatch i {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgb(28 35 51 / 8%);
+}
+
+.swatch.is-active {
+  border-color: var(--c-text);
+}
+
+/* ---------- 说明文字 ---------- */
+.lesson-note {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 3px solid var(--c-primary);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  background: var(--c-surface-soft);
+  color: var(--c-text-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ---------- 练习讲解 ---------- */
+.btn-num {
+  padding: 4px 10px;
+  min-width: 34px;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.q-prompt {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  background: var(--c-surface-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.q-prompt .sub {
+  display: block;
+  margin-top: var(--sp-1);
+  color: var(--c-text-soft);
+  font-size: 13px;
+}
+
+.explain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.explain-list li {
+  padding: 6px 0 6px 12px;
+  border-left: 2px solid var(--c-border);
+  color: var(--c-text-soft);
+  font-size: 14px;
+  line-height: 1.65;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.explain-list li.is-on {
+  border-color: var(--c-primary);
+  opacity: 1;
+}
+
+.explain-list strong {
+  display: block;
+  color: var(--c-text);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.answer-box {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  background: var(--c-green-soft);
+  color: #0d6f52;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.answer-box strong {
+  color: var(--c-green);
+}
+
+.blank {
+  display: inline-block;
+  min-width: 3em;
+  border-bottom: 1px solid var(--c-text-faint);
+  color: var(--c-text-faint);
+  text-align: center;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: var(--c-surface);
+}
+
+.data-table th,
+.data-table td {
+  padding: 5px 6px;
+  border: 1px solid var(--c-border);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+.data-table th {
+  width: 2.5em;
+  background: var(--c-surface-soft);
+  color: var(--c-text-soft);
+}
+
+.num-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.num-grid .btn {
+  justify-content: center;
+}
+
+.q-prompt + .control {
+  margin-top: var(--sp-4);
+}
+
+.stage-note {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--sp-6);
+  color: var(--c-text-faint);
+  font-size: 14px;
+  text-align: center;
+}
