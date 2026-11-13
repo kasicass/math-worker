@@ -168,7 +168,16 @@ const TOPICS = {
         { id: 'exercise-21', title: '练习二十一', lesson: 'exercise-21', status: 'ready' },
       ],
     },
-    { id: 'number-shape', title: '数学广角——数与形', page: 103, verified: false, status: 'planned' },
+    {
+      id: 'number-shape',
+      title: '数学广角——数与形',
+      page: 105,
+      verified: false,
+      sections: [
+        { id: 'number-shape-model', title: '数与形', lesson: 'number-shape', status: 'ready' },
+        { id: 'exercise-22', title: '练习二十二', lesson: 'exercise-22', status: 'ready' },
+      ],
+    },
     { id: 'review', title: '总复习', page: 110, verified: false, status: 'planned' },
   ],
 };
