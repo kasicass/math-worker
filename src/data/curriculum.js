@@ -158,7 +158,16 @@ const TOPICS = {
         { id: 'exercise-19', title: '练习十九', lesson: 'exercise-19', status: 'ready' },
       ],
     },
-    { id: 'pie-chart', title: '扇形统计图', page: 94, verified: false, status: 'planned' },
+    {
+      id: 'pie-chart',
+      title: '扇形统计图',
+      page: 94,
+      verified: false,
+      sections: [
+        { id: 'pie-chart-model', title: '扇形统计图', lesson: 'pie-chart', status: 'ready' },
+        { id: 'exercise-21', title: '练习二十一', lesson: 'exercise-21', status: 'ready' },
+      ],
+    },
     { id: 'number-shape', title: '数学广角——数与形', page: 103, verified: false, status: 'planned' },
     { id: 'review', title: '总复习', page: 110, verified: false, status: 'planned' },
   ],
