@@ -11,8 +11,11 @@ export default defineConfig({
     },
   },
   server: {
+    // 监听所有网卡，方便用手机/平板连同一局域网内的地址调试
+    host: '0.0.0.0',
     port: 5173,
     open: false,
+    strictPort: false,
   },
   build: {
     outDir: 'dist',
