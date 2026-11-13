@@ -59,7 +59,17 @@ const TOPICS = {
         { id: 'exercise-5', title: '练习五', lesson: 'exercise-5', status: 'ready' },
       ],
     },
-    { id: 'fraction-divide', title: '分数除法', page: 27, verified: false, status: 'planned' },
+    {
+      id: 'fraction-divide',
+      title: '分数除法',
+      page: 27,
+      verified: false,
+      sections: [
+        { id: 'fraction-divide-model', title: '分数除法', lesson: 'fraction-divide', status: 'ready' },
+        { id: 'exercise-6', title: '练习六', lesson: 'exercise-6', status: 'ready' },
+        { id: 'exercise-7', title: '练习七', lesson: 'exercise-7', status: 'ready' },
+      ],
+    },
     { id: 'ratio', title: '比', page: 46, verified: false, status: 'planned' },
     {
       id: 'circle',
