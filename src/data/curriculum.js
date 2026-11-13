@@ -155,6 +155,7 @@ const TOPICS = {
         { id: 'percent-meaning', title: '百分数的意义', lesson: 'percent', status: 'ready' },
         { id: 'exercise-18', title: '练习十八', lesson: 'exercise-18', status: 'ready' },
         { id: 'percent-change', title: '多（少）百分之几', lesson: 'percent-change', status: 'ready' },
+        { id: 'exercise-19', title: '练习十九', lesson: 'exercise-19', status: 'ready' },
       ],
     },
     { id: 'pie-chart', title: '扇形统计图', page: 94, verified: false, status: 'planned' },

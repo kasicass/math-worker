@@ -28,6 +28,7 @@ const registry = {
   percent: () => import('./percent.js'),
   'exercise-18': () => import('./exercise-18.js'),
   'percent-change': () => import('./percent-change.js'),
+  'exercise-19': () => import('./exercise-19.js'),
   circle: () => import('./circle.js'),
   'compass-construction': () => import('./compass-construction.js'),
   'exercise-13': () => import('./exercise-13.js'),
