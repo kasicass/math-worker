@@ -146,7 +146,16 @@ const TOPICS = {
         },
       ],
     },
-    { id: 'percent', title: '百分数（一）', page: 78, verified: false, status: 'planned' },
+    {
+      id: 'percent',
+      title: '百分数（一）',
+      page: 80,
+      verified: false,
+      sections: [
+        { id: 'percent-meaning', title: '百分数的意义', lesson: 'percent', status: 'ready' },
+        { id: 'exercise-18', title: '练习十八', lesson: 'exercise-18', status: 'ready' },
+      ],
+    },
     { id: 'pie-chart', title: '扇形统计图', page: 94, verified: false, status: 'planned' },
     { id: 'number-shape', title: '数学广角——数与形', page: 103, verified: false, status: 'planned' },
     { id: 'review', title: '总复习', page: 110, verified: false, status: 'planned' },
