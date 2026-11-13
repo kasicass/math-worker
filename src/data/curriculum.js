@@ -80,6 +80,8 @@ const TOPICS = {
       sections: [
         { id: 'ratio-model', title: '比', lesson: 'ratio', status: 'ready' },
         { id: 'exercise-11', title: '练习十一', lesson: 'exercise-11', status: 'ready' },
+        { id: 'ratio-distribution', title: '按比分配', lesson: 'ratio-distribution', status: 'ready' },
+        { id: 'exercise-12', title: '练习十二', lesson: 'exercise-12', status: 'ready' },
       ],
     },
     {
