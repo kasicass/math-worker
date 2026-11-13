@@ -45,6 +45,8 @@ const TOPICS = {
       sections: [
         { id: 'fraction-multiply-model', title: '分数乘法', lesson: 'fraction-multiply', status: 'ready' },
         { id: 'exercise-1', title: '练习一', lesson: 'exercise-1', status: 'ready' },
+        { id: 'exercise-2', title: '练习二', lesson: 'exercise-2', status: 'ready' },
+        { id: 'exercise-3', title: '练习三', lesson: 'exercise-3', status: 'ready' },
       ],
     },
     { id: 'position-direction', title: '位置与方向（二）', page: 18, verified: false, status: 'planned' },

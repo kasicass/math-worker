@@ -12,6 +12,8 @@
 const registry = {
   'fraction-multiply': () => import('./fraction-multiply.js'),
   'exercise-1': () => import('./exercise-1.js'),
+  'exercise-2': () => import('./exercise-2.js'),
+  'exercise-3': () => import('./exercise-3.js'),
   circle: () => import('./circle.js'),
   'compass-construction': () => import('./compass-construction.js'),
   'exercise-13': () => import('./exercise-13.js'),
